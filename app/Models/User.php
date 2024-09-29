@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
+use Jeffgreco13\FilamentBreezy\Traits\TwoFactorAuthenticatable;
 
 final class User extends Authenticatable
 {
@@ -17,6 +18,7 @@ final class User extends Authenticatable
     use HasPanelShield;
     use HasRoles;
     use Notifiable;
+    use TwoFactorAuthenticatable;
 
     /**
      * The attributes that are mass assignable.
